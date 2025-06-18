@@ -15,6 +15,15 @@ namespace Backend_Assignment_02.Controllers
         /// <returns>
         /// Returns the total score after calculating the number of points
         /// </returns>
+        /// <example>
+        /// "POST" -H "Content-Type: application/x-www-form-urlencoded" -d "Collisions=2&Deliveries=5" ".../api/J1/Delivedroid"
+        /// </example>
+        /// <example>
+        /// "POST" -H "Content-Type: application/x-www-form-urlencoded" -d "Collisions=24&Deliveries=12" ".../api/J1/Delivedroid"
+        /// </example>
+        /// <example>
+        /// "POST" -H "Content-Type: application/x-www-form-urlencoded" -d "Collisions=51&Deliveries=0" ".../api/J1/Delivedroid"
+        /// </example>
         [HttpPost(template: "Delivedroid")]
         public int Delivedroid([FromForm] int Collisions, [FromForm] int Deliveries)
         {
