@@ -15,42 +15,42 @@ namespace Backend_Assignment_02.Controllers
         /// Returns the total spiciness of the chili in the SHU value
         /// </returns>
         /// <example>
-        /// "GET" api/J2/ChilliPeppers?ChiliPeppers=Poblano%2CCayenne%2CThai%2CPoblano -> 118000
+        /// "GET" api/J2/ChilliPeppers?Ingredients=Poblano%2CCayenne%2CThai%2CPoblano -> 118000
         /// </example>
         /// <example>
-        /// "GET" api/J2/ChilliPeppers?ChiliPeppers=Habanero%2CThai%2CCayenne%2CSerrano%2CMirasol%2CPoblano -> 263000
+        /// "GET" api/J2/ChilliPeppers?Ingredients=Habanero%2CThai%2CCayenne%2CSerrano%2CMirasol%2CPoblano -> 263000
         /// </example>
         /// <example>
-        /// "GET" api/J2/ChilliPeppers?ChiliPeppers=Cayenne%2CCayenne%2CCayenne%2CCayenne -> 160000
+        /// "GET" api/J2/ChilliPeppers?Ingredients=Cayenne%2CCayenne%2CCayenne%2CCayenne -> 160000
         /// </example>
         [HttpGet(template: "ChilliPeppers")]
-        public int ChilliPeppers(string ChiliPeppers)
+        public int ChilliPeppers(string Ingredients)
         {
             int heatUnits = 0;
-            string[] ingredients = ChiliPeppers.Split(',');
-            foreach (string ingredient in ingredients)
+            string[] chilis = Ingredients.Split(',');
+            foreach (string chili in chilis)
             {
-                if (ingredient == "Poblano")
+                if (chili == "Poblano")
                 {
                     heatUnits += 1500;
                 }
-                else if (ingredient == "Mirasol")
+                else if (chili == "Mirasol")
                 {
                     heatUnits += 6000;
                 }
-                else if (ingredient == "Serrano")
+                else if (chili == "Serrano")
                 {
                     heatUnits += 15500;
                 }
-                else if (ingredient == "Cayenne")
+                else if (chili == "Cayenne")
                 {
                     heatUnits += 40000;
                 }
-                else if (ingredient == "Thai")
+                else if (chili == "Thai")
                 {
                     heatUnits += 75000;
                 }
-                else if (ingredient == "Habanero")
+                else if (chili == "Habanero")
                 {
                     heatUnits += 125000;
                 }
