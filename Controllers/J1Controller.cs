@@ -18,12 +18,15 @@ namespace Backend_Assignment_02.Controllers
         /// HEADER: Content-Type: application/x-www-form-urlencoded
         /// <example>
         /// "POST" -H "Content-Type: application/x-www-form-urlencoded" -d "Collisions=2&Deliveries=5" ".../api/J1/Delivedroid"
+        /// Answer -> 730
         /// </example>
         /// <example>
         /// "POST" -H "Content-Type: application/x-www-form-urlencoded" -d "Collisions=24&Deliveries=12" ".../api/J1/Delivedroid"
+        /// Answer -> 360
         /// </example>
         /// <example>
         /// "POST" -H "Content-Type: application/x-www-form-urlencoded" -d "Collisions=51&Deliveries=0" ".../api/J1/Delivedroid"
+        /// Answer -> -510
         /// </example>
         [HttpPost(template: "Delivedroid")]
         public int Delivedroid([FromForm] int Collisions, [FromForm] int Deliveries)
