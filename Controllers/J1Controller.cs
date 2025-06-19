@@ -15,6 +15,7 @@ namespace Backend_Assignment_02.Controllers
         /// <returns>
         /// Returns the total score after calculating the number of points
         /// </returns>
+        /// HEADER: Content-Type: application/x-www-form-urlencoded
         /// <example>
         /// "POST" -H "Content-Type: application/x-www-form-urlencoded" -d "Collisions=2&Deliveries=5" ".../api/J1/Delivedroid"
         /// </example>
