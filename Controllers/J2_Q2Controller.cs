@@ -37,12 +37,14 @@ namespace Backend_Assignment_02.Controllers
             dataset[1] = row2.Split(',').Select(int.Parse).ToArray();
             dataset[2] = row3.Split(',').Select(int.Parse).ToArray();
             dataset[3] = row4.Split(',').Select(int.Parse).ToArray();
+            // Gets the input of each row as a string, which we will then split into various parts whenever we see a comma.
+            // We will then parse this string data into an integer value and stores it in our array.
 
-            target = dataset[0].Sum();
+            target = dataset[0].Sum();  // Calculates the sum of values in the first row and assigns it to the variable 'target'
 
             for(int i = 0; i < 4; i++)
             {
-                if (dataset[i].Sum() != target)
+                if (dataset[i].Sum() != target) // Checks if the sum of the other rows are equal to the value in 'target'
                 {
                     result = "not magic";
                     return result;
@@ -56,7 +58,7 @@ namespace Backend_Assignment_02.Controllers
                 {
                     colSum += dataset[row][col];
                 }
-                if (colSum != target)
+                if (colSum != target)   // Checks if the sum of the columns are not equal to the value in 'target'
                 {
                     result = "not magic";
                     return result;
