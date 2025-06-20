@@ -28,6 +28,8 @@ namespace Backend_Assignment_02.Controllers
         {
             int heatUnits = 0;
             string[] chilis = Ingredients.Split(',');
+            // Gets the input as a string, which we will then split into various parts whenever we see a comma
+            // We will then store them in the string array chilis.
             foreach (string chili in chilis)
             {
                 if (chili == "Poblano")
