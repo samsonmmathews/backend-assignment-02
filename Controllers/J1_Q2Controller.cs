@@ -9,7 +9,7 @@ namespace Backend_Assignment_02.Controllers
     {
         /// <summary>
         /// Takes the number of regular and small cupcake boxes as input and displays the number of remaining cupcakes.
-        /// There are 28 students in the class [given in the question]
+        /// There are 28 students in the class [given in the question]. Each student will be taking exactly one cupcake
         /// </summary>
         /// <param name="regularBoxes">The number of regular cupcake boxes [8 cupcakes are inside this box]</param>
         /// <param name="smallBoxes">The number of small cupcake boxes [3 cupcakes are inside this box]</param>
